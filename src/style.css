@@ -1,1 +1,28 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-color: green;
+}
+.carta {
+  background-color: white;
+  height: 200px;
+  width: 125px;
+  border-radius: 20px;
+  margin: 40px auto;
+}
+.numero {
+  font-size: 50px;
+  margin: auto;
+}
+.pintatop {
+  width: 30%;
+}
+.pintabot {
+  display: block;
+  width: 30%;
+  margin-top: 90%;
+  margin-left: auto;
+  /* margin-top: 100px; */
+}
+#cantCards {
+  width: 150px;
+}
