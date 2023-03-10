@@ -15,45 +15,43 @@
   <body>
     <div class="container w-50">
       <div class="row mt-3">
-        <label for="cantCards" class="col-sm-2 col-form-label">Q cartas</label>
-        <div class="col-sm-10">
-          <input type="number" class="form-control" id="cantCards" />
-        </div>
-      </div>
-      <button type="button" class="btn btn-primary mt-3" id="sorteo">
-        Sorteo
-      </button>
-      <button type="button" class="btn btn-warning mt-3 ms-3" id="sort">
-        clasificación
-      </button>
-    </div>
-    <div class="row">
-      <div class="col">
-        <div id="cartas">
-          <div class="carta">
-            <img
-              id="imgtop"
-              class="pintatop"
-              src="../src/assets/img/corazon.png"
-              alt=""
-            />
-            <p id="numero" class="numero">
-              K
-            </p>
-            <img
-              id="imgbot"
-              class="pintabot"
-              src="../src/assets/img/corazon.png"
-              alt=""
-            />
+        <div class="col-2"></div>
+        <div class="col">
+          <div class="row mb-1">
+            <label for="cantCards" class="col-sm-2 col-form-label"
+              >N°Cartas</label
+            >
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="cantCards" />
+            </div>
           </div>
+
+          <button
+            type="button"
+            class="btn btn-primary btn-sm mt-3 me-3"
+            id="sorteo"
+          >
+            Sorteo
+          </button>
+          <button type="button" class="btn btn-warning btn-sm mt-3" id="sort">
+            clasificación
+          </button>
         </div>
+        <div class="col-2"></div>
       </div>
-      <div class="col">
-        <div id="order"></div>
-      </div>
-      <div class="col">
-        <div id="log"></div>
+      <div class="row">
+        <div class="col">
+          <h2 class="text-center mt-3">Sorteo</h2>
+          <div id="cartas"></div>
+        </div>
+        <div class="col">
+          <h2 class="text-center mt-3">Clasificado</h2>
+          <div id="order"></div>
+        </div>
+        <div class="col">
+          <h2 class="text-center mt-3">Log</h2>
+          <div id="log"></div>
+        </div>
       </div>
     </div>
   </body>
