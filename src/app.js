@@ -31,18 +31,23 @@ window.onload = function() {
     let cardsn = [].concat(cards);
     let paso = "";
     let ind = 0;
+    let indord = 0;
     order.innerHTML = "";
-    for (let i = 1; i <= cantCards.value; i++) {
-      for (let j = 0; j < cantCards.value - 1; j++) {
-        if (numcar(cardsn[j].numero) > numcar(cardsn[j + 1].numero)) {
-          cardsord[ind] = cardsn[j];
-          ind++;
-          cardsord[ind] = cardsn[j + 1];
-          ind++;
-          paso = cardsn[j + 1];
-          cardsn[j + 1] = cardsn[j];
-          cardsn[j] = paso;
+    for (let i = 0; i <= cantCards.value - 1; i++) {
+      indord = i;
+      for (let j = i + 1; j < cantCards.value; j++) {
+        if (numcar(cardsn[j].numero) < numcar(cardsn[indord].numero)) {
+          indord = j;
         }
+      }
+      if (indord !== i) {
+        cardsord[ind] = cardsn[i];
+        ind++;
+        cardsord[ind] = cardsn[indord];
+        ind++;
+        paso = cardsn[indord];
+        cardsn[indord] = cardsn[i];
+        cardsn[i] = paso;
       }
     }
     // renderizamos cartas ordenadas
@@ -67,6 +72,10 @@ window.onload = function() {
   });
   // función de renderizado, recibe array y ID
   function renderCards(array, id) {
+    if (id == "cartas") {
+      document.getElementById("order").innerHTML = "";
+      document.getElementById("log").innerHTML = "";
+    }
     document.getElementById(id).innerHTML = "";
     for (let i = 0; i < array.length; i++) {
       document.getElementById(id).innerHTML +=
