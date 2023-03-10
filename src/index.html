@@ -23,31 +23,38 @@
       <button type="button" class="btn btn-primary mt-3" id="sorteo">
         Sorteo
       </button>
-      <button type="button" class="btn btn-warning mt-3 ms-3 ">
+      <button type="button" class="btn btn-warning mt-3 ms-3" id="sort">
         clasificación
       </button>
     </div>
-    <ul>
-      <div class="carta position-relative">
-        <p
-          id="numero"
-          class="numero position-absolute top-50 start-50 translate-middle"
-        >
-          K
-        </p>
-        <img
-          id="imgtop"
-          class="pintatop"
-          src="../src/assets/img/corazon.png"
-          alt=""
-        />
-        <img
-          id="imgbot"
-          class="pintabot"
-          src="../src/assets/img/corazon.png"
-          alt=""
-        />
+    <div class="row">
+      <div class="col">
+        <div id="cartas">
+          <div class="carta">
+            <img
+              id="imgtop"
+              class="pintatop"
+              src="../src/assets/img/corazon.png"
+              alt=""
+            />
+            <p id="numero" class="numero">
+              K
+            </p>
+            <img
+              id="imgbot"
+              class="pintabot"
+              src="../src/assets/img/corazon.png"
+              alt=""
+            />
+          </div>
+        </div>
       </div>
-    </ul>
+      <div class="col">
+        <div id="order"></div>
+      </div>
+      <div class="col">
+        <div id="log"></div>
+      </div>
+    </div>
   </body>
 </html>

@@ -11,17 +11,18 @@ body {
 }
 .numero {
   font-size: 50px;
-  margin: auto;
+  text-align: center;
+  margin-top: 20px;
 }
 .pintatop {
   width: 30%;
+  margin-top: 5px;
+  margin-left: 5px;
 }
 .pintabot {
-  display: block;
   width: 30%;
-  margin-top: 90%;
-  margin-left: auto;
-  /* margin-top: 100px; */
+  margin-top: 5px;
+  margin-left: 85px;
 }
 #cantCards {
   width: 150px;
